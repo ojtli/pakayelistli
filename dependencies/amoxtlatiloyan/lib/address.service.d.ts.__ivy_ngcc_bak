@@ -1,0 +1,15 @@
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Address } from './address';
+import { Observable } from 'rxjs';
+export declare class AddressService {
+    private http;
+    private readonly api;
+    constructor(http: HttpClient, api?: string);
+    static isValid(address: Address): string | true;
+    validate(address: string): Observable<Object>;
+    analyze(address: string): Observable<Object>;
+    search(address: Address): Observable<any>;
+    detailSearch(address: Address): Observable<any>;
+    protected handleError(err: HttpErrorResponse): Observable<never>;
+    isMaybeAnAddress(input: string): boolean;
+}

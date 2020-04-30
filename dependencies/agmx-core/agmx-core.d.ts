@@ -1,0 +1,7 @@
+/**
+ * Generated bundle index. Do not edit.
+ */
+export * from './public-api';
+export { BROWSER_GLOBALS_PROVIDERS as ɵc, DocumentRef as ɵb, WindowRef as ɵa } from './lib/utils/browser-globals';
+
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYWdteC1jb3JlLmQudHMiLCJzb3VyY2VzIjpbImFnbXgtY29yZS5kLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEdlbmVyYXRlZCBidW5kbGUgaW5kZXguIERvIG5vdCBlZGl0LlxuICovXG5leHBvcnQgKiBmcm9tICcuL3B1YmxpYy1hcGknO1xuZXhwb3J0IHsgQlJPV1NFUl9HTE9CQUxTX1BST1ZJREVSUyBhcyDJtWMsIERvY3VtZW50UmVmIGFzIMm1YiwgV2luZG93UmVmIGFzIMm1YSB9IGZyb20gJy4vbGliL3V0aWxzL2Jyb3dzZXItZ2xvYmFscyc7XG4iXX0=

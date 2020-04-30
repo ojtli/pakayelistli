@@ -1,0 +1,12 @@
+import { InjectionToken } from '@angular/core';
+export declare const BASE_URL: InjectionToken<string>;
+export declare const TOKEN: InjectionToken<string>;
+export declare class AmoxtlatiloyanModule {
+    static forRoot(host: string, apiToken: string): {
+        ngModule: typeof AmoxtlatiloyanModule;
+        providers: {
+            provide: InjectionToken<string>;
+            useValue: string;
+        }[];
+    };
+}

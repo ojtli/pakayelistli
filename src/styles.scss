@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
+
+.lib-search-input .mat-form-field {
+  display: block;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+#sidebar {
+
+  .mat-card {
+    .mat-card-header-text {
+      margin: 0;
+    }
+  }
+  .mat-list-item-content {
+    padding: 0;
+  }
+}
+
+.mat-slide-toggle.mat-checked {
+  &.public {
+    .mat-slide-toggle-bar {
+      background-color: #fbeee6;
+    }
+    .mat-slide-toggle-thumb {
+      background-color: #fac187;
+    }
+  }
+
+  &.private {
+    .mat-slide-toggle-bar {
+      background-color: #88cdf6;
+    }
+    .mat-slide-toggle-thumb {
+      background-color: #67b5ef;
+    }
+  }
+  &.covid {
+    .mat-slide-toggle-bar {
+      background-color: #cff4d2;
+    }
+    .mat-slide-toggle-thumb {
+      background-color: #9bf19e;
+    }
+
+  }
+}
+
+@media all and (max-width: 768px) and (orientation: landscape) {
+  #sidebar {
+    .mat-form-field-appearance-outline .mat-form-field-wrapper {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+import { EventEmitter, OnInit } from '@angular/core';
+import { Reference } from './reference';
+import { FormControl, NgForm } from '@angular/forms';
+import { Address } from './address';
+export declare class SearchFormComponent implements OnInit {
+    address: Address;
+    ref: Reference;
+    cityCtrl: FormControl;
+    filteredCities: any;
+    searchForm: NgForm;
+    copyAddress: string;
+    submitText: string;
+    autoClear: boolean;
+    submitted: EventEmitter<Address>;
+    constructor();
+    ngOnInit(): void;
+    addSegment(index?: number): void;
+    deleteSegment(): void;
+    clear(): void;
+    search(): void;
+    isSameAddress(): boolean;
+    addressToString(address: Address, coloquial?: boolean): string;
+}

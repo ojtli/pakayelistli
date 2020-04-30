@@ -1,0 +1,70 @@
+<mat-card [class.shrink]="shrink" class="mat-elevation-z4">
+  <mat-card-header>
+    <mat-card-title>
+      Tu hospital mas cercano. <a href="https://github.com/jgutix/pakayelistli" target="_blank" rel="noopener"
+                                  aria-label="Repositorio" mat-icon-button>
+      <img src="assets/GitHub-Mark-32px.png" width="24px" alt="Github"></a>
+    </mat-card-title>
+    <mat-card-subtitle>
+      Busca tu dirección y te mostraremos el centro de salud u hospital mas cercano.
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-progress-bar [mode]="searching.inProgress ? 'indeterminate' : ''"></mat-progress-bar>
+  <mat-card-content>
+    <div class="search-form">
+      <div class="container">
+        <lib-search-input (submitted)="search($event)" [error]="responseWarn" [hint]="searching.message"
+                          class="lib-search-input"></lib-search-input>
+      </div>
+    </div>
+    <section class="hospital-section">
+      <mat-list class="mat-typography" dense>
+        <h3 matSubheader>Hospitales <span class="spacer"></span>
+          <button (click)="help()" aria-label="Ayuda" mat-icon-button>
+            <mat-icon>help</mat-icon></button>
+          <button (click)="toggleCard()" [disabled]="!origin" aria-label="Mas opciones" class="shrinker" mat-button
+                  mat-icon-button>
+            <mat-icon>expand_more</mat-icon>
+          </button>
+        </h3>
+        <div class="filters" matSubheader>
+          <mat-slide-toggle [(ngModel)]="covid19" (ngModelChange)="updateInfo()" class="covid"
+                            name="covid19">COVID-19
+          </mat-slide-toggle>
+          <mat-slide-toggle [(ngModel)]="privateHospitals" (ngModelChange)="updateInfo()" class="private">Privados
+          </mat-slide-toggle>
+          <mat-slide-toggle [(ngModel)]="publicHospitals" (ngModelChange)="updateInfo()" class="public">Públicos
+          </mat-slide-toggle>
+        </div>
+        <div class="all-hospitals">
+          <ng-container *ngFor="let item of sortedHospitals;trackBy: trackHospitals">
+            <mat-list-item  [class.covid]="item.covid19 && covid19"
+                            [class.mat-elevation-z12]="this.selectedHospital && this.selectedHospital.name === item.name"
+                            [class.private]="item.private" [class.public]="item.public"
+                            [class.selected]="this.selectedHospital && this.selectedHospital.name === item.name">
+                    <span *ngIf="this.selectedHospital && this.selectedHospital.name === item.name; then thenBlock else elseBlock"
+                          matListIcon></span>
+              <ng-template #thenBlock>
+                <a *ngIf="this.origin.address.position" [href]="openAtGmap(item)" mat-button mat-icon-button
+                   rel="noopener" target="_blank">
+                  <mat-icon>map</mat-icon></a>
+              </ng-template>
+              <ng-template #elseBlock>
+                <button (click)="view(item)" *ngIf="!origin" aria-label="Ubicar" mat-button
+                        mat-icon-button><mat-icon>room</mat-icon></button>
+                <button (click)="routeTo(item)" *ngIf="!!origin" mat-button
+                        mat-icon-button><mat-icon>directions</mat-icon></button>
+              </ng-template>
+
+              <p class="hospital-name" matLine> {{item.name}} </p>
+              <p class="demo-2" matLine> {{item.city}}
+                <span *ngIf="item.distance"> - {{item.distance | number:'.2-2'}}km</span>
+              </p>
+            </mat-list-item>
+            <mat-divider [inset]="true"></mat-divider>
+          </ng-container>
+        </div>
+      </mat-list>
+    </section>
+  </mat-card-content>
+</mat-card>

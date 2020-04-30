@@ -1,0 +1,8 @@
+/*
+ * Public API Surface of agmx-core
+ */
+export * from './lib/directives';
+export * from './lib/services';
+export * from './lib/services/google-maps-types';
+export * from './lib/agmx-core.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL2FnbXgtY29yZS8iLCJzb3VyY2VzIjpbInB1YmxpYy1hcGkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7QUFDSCxjQUFjLGtCQUFrQixDQUFDO0FBQ2pDLGNBQWMsZ0JBQWdCLENBQUM7QUFDL0IsY0FBYyxrQ0FBa0MsQ0FBQztBQUVqRCxjQUFjLHdCQUF3QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLypcbiAqIFB1YmxpYyBBUEkgU3VyZmFjZSBvZiBhZ214LWNvcmVcbiAqL1xuZXhwb3J0ICogZnJvbSAnLi9saWIvZGlyZWN0aXZlcyc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9zZXJ2aWNlcyc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9zZXJ2aWNlcy9nb29nbGUtbWFwcy10eXBlcyc7XG5cbmV4cG9ydCAqIGZyb20gJy4vbGliL2FnbXgtY29yZS5tb2R1bGUnO1xuIl19

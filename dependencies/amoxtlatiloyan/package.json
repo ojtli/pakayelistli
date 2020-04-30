@@ -1,0 +1,32 @@
+{
+  "name": "amoxtlatiloyan",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^9.1.0",
+    "@angular/core": "^9.1.0",
+    "@angular/cdk": "^9.1.3",
+    "@angular/material": "^9.1.3",
+    "@types/googlemaps": "^3.39.3",
+    "tslib": "^1.10.0"
+  },
+  "main": "bundles/amoxtlatiloyan.umd.js",
+  "module": "fesm5/amoxtlatiloyan.js",
+  "es2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/amoxtlatiloyan.js",
+  "es2015": "fesm2015/amoxtlatiloyan.js",
+  "esm5": "esm5/amoxtlatiloyan.js",
+  "esm2015": "esm2015/amoxtlatiloyan.js",
+  "fesm5": "fesm5/amoxtlatiloyan.js",
+  "fesm2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/amoxtlatiloyan.js",
+  "fesm2015": "fesm2015/amoxtlatiloyan.js",
+  "typings": "amoxtlatiloyan.d.ts",
+  "metadata": "amoxtlatiloyan.metadata.json",
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by NGCC. This is not allowed.\\nPlease delete and rebuild the package, without compiling with NGCC, before attempting to publish.\\nNote that NGCC may have been run by importing this package into another project that is being built with Ivy enabled.\\n')\" && exit 1"
+  },
+  "__processed_by_ivy_ngcc__": {
+    "es2015": "9.1.4",
+    "fesm2015": "9.1.4",
+    "typings": "9.1.4"
+  }
+}

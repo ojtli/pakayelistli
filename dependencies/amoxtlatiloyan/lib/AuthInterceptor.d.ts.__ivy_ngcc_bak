@@ -1,0 +1,8 @@
+import { Injector } from '@angular/core';
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
+import { Observable } from 'rxjs';
+export declare class AuthInterceptor implements HttpInterceptor {
+    private apiToken;
+    constructor(inj: Injector);
+    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>;
+}

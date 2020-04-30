@@ -1,6 +1,19 @@
 # Pakayelistli
+Pakayelistli means "Health" in [nahuatl](https://es.wikipedia.org/wiki/N%C3%A1huatl)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
+This site is deployed at: [salud.ojtli.jgutix.com](salud.ojtli.jgutix.com)
+
+This project is part of the Google Map's initiative: [https://cloud.google.com/blog/products/maps-platform/supporting-not-profit-covid-19-response-efforts-google-maps-platform-credits](https://cloud.google.com/blog/products/maps-platform/supporting-not-profit-covid-19-response-efforts-google-maps-platform-credits) 
+and will allow to find the closest hospitals to your nicaraguan address, by default those enabled to attend COVID19 but there are also filters for others private and public.
+
+You can contribute to the hospitals list at: [src/app/hospitals.ts](src/app/hospitals.ts)
+
+Nicaraguan Addresses geocoded by [Ojtli](ojtli.jgutix.com)
+
+Read this in other languages
+
+## Before Building
+Make sure to add your Google Maps' key and Ojtli keys in app.module.ts
 
 ## Development server
 

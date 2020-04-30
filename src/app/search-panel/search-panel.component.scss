@@ -1,0 +1,104 @@
+.mat-card {
+  padding: 16px 16px 0 16px;
+  overflow: hidden;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 16px;
+}
+
+.all-hospitals {
+  max-height: 30vh;
+  overflow: auto;
+}
+
+mat-hint {
+  display: none;
+}
+
+.hospital-section {
+  margin-right: -16px;
+  margin-left: -16px;
+}
+
+.mat-list-item {
+  &.public {
+    //background-color: #fbeee6;
+    background-color: rgba(251, 238, 230, 0.6);
+  }
+
+  &.private {
+    //background-color: #88cdf6;
+    background-color: rgba(136, 205, 242, 0.5);
+  }
+
+  &.covid {
+    //background-color: #cff4d2;
+    background-color: rgba(207, 244, 210, 0.5);
+  }
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.mat-list-base .mat-list-item .hospital-name {
+  white-space: normal;
+}
+
+.shrink {
+  .shrinker .mat-icon {
+    transform: rotate(180deg);
+    transition: 0.5s ease-in-out;
+  }
+  .all-hospitals {
+    max-height: 60px;
+    overflow: hidden;
+  }
+  .filters {
+    display: none;
+  }
+  .search-form {
+    display: none;
+  }
+}
+
+.selected {
+  color: lightseagreen;
+}
+
+@media all and (min-width: 768px) {
+  .all-hospitals {
+    max-height: 40vh;
+    overflow-y: scroll;
+  }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
+  .all-hospitals {
+    max-height: 55vh !important;
+    overflow: auto;
+  }
+}
+
+@media all and (min-width: 960px) {
+
+  .hospital-section {
+    margin-top: 20px;
+  }
+
+  .all-hospitals {
+    max-height: 65vh;
+  }
+
+  .shrinker {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+import { EventEmitter, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { FormControl } from '@angular/forms';
+export declare class SearchInputComponent implements OnInit, OnChanges {
+    address: string;
+    fullAddress: string;
+    hint: boolean | string;
+    error: string;
+    submitted: EventEmitter<string>;
+    addressField: FormControl;
+    constructor();
+    ngOnInit(): void;
+    reset(): void;
+    propagate(): void;
+    preventEnter($event: any): void;
+    isString(hint: boolean | string): boolean;
+    ngOnChanges(changes: SimpleChanges): void;
+}
